@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Lovers</title>
+	<h1>The Lovers</h1>
+
+	<style type="text/css">
+		.ring{position: absolute; left: 0; top: 0;}
+		
+		#loversText{font-family: 'Garamond', serif; z-index: 9; position: absolute; left: 300px; top: 100px; font-size: 2rem;}
+
+		.image {
+		width: 1920px;
+		height: 1080px;
+		background-image: <a href="https://ibb.co/brqC2D3"><img src="https://i.ibb.co/55tSnw9/lovers.jpg" alt="lovers" border="0"></a>;
+		background-size: cover;
+	}
+	</style>
+
+
+</head>
+<body>
+	<div id = "loversText"></div>
+	<img id="lovers" src="lovers.jpeg">
+	<br>
+	<button id="loversBut">come with me</button>
+	<audio id="loversSnd" src="loversbgm.mp3"></audio>
+
+	<br>
+	<br>
+
+	<script type = "text/javascript">
+		lovers.onclick = function(){
+			lovers.src = "after.png"
+		}
+
+		loversBut.onclick = function(){
+			loversSnd.play();
+		}
+
+
+
+	var a = ["ring","ring2","ring3"];	
+ 
+	for (var i = 0; i<90; i++) {
+		var ring = document.createElement("img");
+		ring.src = a[randomBG(0, 2)] + ".png";
+		ring.className = "ring";
+		ring.style.width = randomBG(20, 80) + "px";
+		ring.style.height = "auto";
+		ring.style.left = Math.random()*screen.availWidth + "px";
+		ring.style.top = Math.random()*screen.availHeight + "px";
+			document.body.appendChild(ring);
+		}
+
+
+
+	var text = "Excuse me, mademoiselle.<br> Do you smoke?<br> No, thank you.<br> I'm sorry.<br> It's so surprising...<br> a young white girl on a native bus.<br> I like your hat. It's original...<br> a man's hat on a young girl.<br> And you're pretty.<br> You can do anything you like.<br> You're who?<br> I live in Vinh Long.<br> Where in Vinh Long?<br> On the river just outside.<br> The big house with the terraces.<br> The blue stone one?<br> Yes.<br> It's a Chinese house.<br> I am Chinese.<br> Chinese.<br> He's from that financial minority...<br> that owns all the popular housing of the colony.<br> He's back from Paris...<br> where he undertook some business studies.<br> He's the one...<br> who was crossing the Mekong that day...<br> towards Saigon.<br> If you want, I can drive you to Saigon.<br>";
+
+	var textArr = text.split(" ");
+	console.log(textArr);
+
+	var myTimer = setInterval(print, 450);
+	var s = 0;
+	function print(){
+		document.body.innerHTML += textArr[s] + " ";
+		s++;
+		if(s == textArr.length){
+				clearInterval(myTimer);
+		}
+	}
+
+
+			var f = document.createElement("span")
+			f.innerHTML = textArray[s] + " ";
+			f.className = "word";
+			letterText.appendChild(f);
+
+	
+		function randomBG(min, max) {
+			min = Math.ceil(min);
+			max = Math.floor(max);
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+			
+		}
+
+
+	</script>
+
+
+
+
+</body>
+</html>
